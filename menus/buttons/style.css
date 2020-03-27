@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.buttons-examples {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Example1*/
+.example1 {
+    position: relative;
+    height: 100px;
+}
+
+.example1 a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Arial sans-serif;
+    background: #fff;
+    border: 2px solid #262626;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.example1 a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #ff003b;
+    transition: .5s ease-in-out;
+}
+
+.example1 a:hover::before {
+    left: 0;
+    z-index: -1;
+}
+
+.example1 span {
+    color: #262626;
+    transition: .5s ease-in-out;
+    z-index: 1;
+}
+
+.example1 a:hover span {
+    color: #fff;
+}
+
+/*Example2*/
+.example2 {
+    margin-top: 20px;
+    position: relative;
+}
+
+.example2 a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #262626;
+    padding: 10px 30px;
+    border: 2px solid #262626;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.example2 a::before,
+.example2 a::after,
+.example2 span::before,
+.example2 span::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 25.5%;
+    background: #262626;
+    z-index: -1;
+    transition: .5s;
+}
+
+.example2 a::before {
+    top: 0;
+    left: -26%;
+}
+
+.example2 a:hover::before {
+    top: 0;
+    left: 0;
+}
+
+.example2 a::after {
+    top: 0;
+    right: -26%;
+}
+
+.example2 a:hover::after {
+    top: 0;
+    right: 0%;
+}
+
+.example2 span::before {
+    bottom: -100%;
+    left: 25%;
+}
+
+.example2 a:hover span::before {
+    bottom: 0;
+    left: 25%;
+}
+
+.example2 span::after {
+    top: -100%;
+    left: 50%;
+}
+
+.example2 a:hover span::after {
+    top: 0;
+    left: 50%;
+}
+
+.example2 a:hover {
+    color: #fff;
+}

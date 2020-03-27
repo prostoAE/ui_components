@@ -9,7 +9,7 @@ body {
 }
 .fullpageMenu {
     position: fixed;
-    top: 0;
+    top: -100%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -18,6 +18,9 @@ body {
     align-items: center;
     background: #111;
     transition: 0.5s;
+}
+.fullpageMenu.active {
+    top: 0;
 }
 .fullpageMenu .banner {
     position: relative;
@@ -97,6 +100,18 @@ body {
     right: 20px;
     width: 60px;
     height: 60px;
-    background: #fff url("menu.png");
+    background: #fff url("Menu_icon.png") no-repeat center;
     background-size: 40px;
+    cursor: pointer;
+}
+.menu-icon.active {
+    background: #fff url("Menu_icon-close.png") no-repeat center;
+    background-size: 40px;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .banner {
+        display: none;
+    }
 }

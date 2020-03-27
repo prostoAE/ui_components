@@ -9,11 +9,11 @@
 </head>
 <body>
 
-<div class="fullpageMenu">
+<div class="fullpageMenu" id="top-nav">
     <div class="banner">
         <img src="./unnamed.jpg" alt="banner-foto">
     </div>
-    <nav class="menu" id="top-nav">
+    <nav class="menu">
         <ul>
             <li><a href="#" data-text="Home">Home</a></li>
             <li><a href="#" data-text="About">About</a></li>
@@ -24,11 +24,13 @@
         </ul>
     </nav>
 </div>
-<span class="menu-icon" id="toggle-icon"></span>
+<span class="menu-icon" id="toggle-icon" onclick="menuToggle()"></span>
 <script>
     function menuToggle() {
         var nav = document.querySelector('#top-nav');
+        var toggle = document.querySelector('#toggle-icon');
         nav.classList.toggle('active');
+        toggle.classList.toggle('active');
     }
 </script>
 

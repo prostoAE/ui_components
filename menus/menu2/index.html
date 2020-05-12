@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">
+            <h1>Logo</h1>
+        </a>
+
+        <a href="#" class="toggle">Menu</a>
+
+        <nav class="header-menu menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#">Home</a></li>
+                <li class="menu__item"><a href="#">About</a></li>
+                <li class="menu__item"><a href="#">Services</a></li>
+                <li class="menu__item"><a href="#">Team</a></li>
+                <li class="menu__item"><a href="#">Portfolio</a></li>
+                <li class="menu__item"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        document.querySelector('.toggle').onclick = function() {
+            document.querySelector('.menu__list').classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>
